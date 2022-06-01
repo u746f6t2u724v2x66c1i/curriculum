@@ -14,6 +14,6 @@ let y = 0;
 if (y % 2 === 0) {
     console.log('偶数です');
 }
- else (y % 2 === 1){
+ else if (y % 2 === 1){
     console.log('奇数です');  
 }
