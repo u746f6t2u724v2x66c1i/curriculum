@@ -14,6 +14,12 @@ let y = 0;
 if (y % 2 === 0) {
     console.log('偶数です');
 }
- else if (y % 2 === 1){
+ else if (y % 2 === 1) {
     console.log('奇数です');  
+}
+ else if (y % 2 !== 0 && y % 2 !== 1) {
+    console.log('自然数ではありません');
+}
+ else {
+    console.log('elseの時は条件を書いてはいけない様です');
 }
