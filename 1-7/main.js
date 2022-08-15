@@ -2,13 +2,13 @@
 class Taiyaki {
 
 	//コンストラクタ
-	constructor(nakami){
+	constructor(nakami) {
 		this.nakami = nakami;
 	}
 	
 	//食べるメソッド（関数）作成
 	eat() {
-		console.log('中身は${this.nakami}です');
+		console.log(`中身は${this.nakami}です`);
 	}
 }
 //「あんこ」オブジェクト作成
