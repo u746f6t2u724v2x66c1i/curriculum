@@ -18,15 +18,10 @@ class Car {
 	
 	//ガソリンとナンバーのメソッド（関数）作成
 	getNumGas() {
-		console.log(`ガソリンは${gass}です`);
-		console.log(`ナンバーは${cnum}です`);
+		console.log(`ガソリンは${this.gass}です。ナンバーは${this.cnum}です`);
 	}
 }
 
-//「ガソリン」オブジェクト作成
-let gass = new Car('○○');
-gass.getNumGas();
-
-//「ナンバー」オブジェクト作成
-let cnum = new Car('△△');
-cnum.getNumGas();
+//「ガソリン」と「ナンバー」のオブジェクト作成
+let carobje = new Car('〇〇','△△');
+carobje.getNumGas();
