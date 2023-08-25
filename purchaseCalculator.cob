@@ -10,15 +10,14 @@
        01 TOTAL-PURCHASES     PIC S9(9)V99 VALUE 0.
 
        PROCEDURE DIVISION.
-          PERFORM UNTIL CUSTOMER-ID = 0
-              DISPLAY "Enter customer ID (0 to exit): "
-              ACCEPT CUSTOMER-ID
-              IF CUSTOMER-ID NOT = 0
-                  DISPLAY "Enter purchase amount: "
-                  ACCEPT PURCHASE-AMOUNT
-                  ADD PURCHASE-AMOUNT TO TOTAL-PURCHASES
-              END-IF
-          END-PERFORM.
+       RUN-START.
+          DISPLAY "Enter customer ID (0 to exit): ".
+          ACCEPT CUSTOMER-ID.
+          IF CUSTOMER-ID NOT = 0
+              DISPLAY "Enter purchase amount: "
+              ACCEPT PURCHASE-AMOUNT
+              ADD PURCHASE-AMOUNT TO TOTAL-PURCHASES
+          END-IF.
 
           DISPLAY "Total purchases: ", TOTAL-PURCHASES.
           STOP RUN.
