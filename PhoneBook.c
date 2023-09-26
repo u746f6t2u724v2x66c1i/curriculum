@@ -31,7 +31,7 @@ int main() {
         }
 
         if (!found) {
-            printf("not found\n");
+            printf("Not found\n");
         }
     }
 
