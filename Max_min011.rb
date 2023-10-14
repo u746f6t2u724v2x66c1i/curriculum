@@ -1,5 +1,5 @@
 def main
-  puts 'Enter three natural numbers (A B C D E F): '
+  puts 'Enter six natural numbers (A B C D E F): '
   a = gets.split.map(&:to_i)
 
   max_value = a.max
