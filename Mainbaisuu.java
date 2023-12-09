@@ -7,7 +7,7 @@ public class Mainbaisuu {
         // Let's チャレンジ！！
         Scanner sc = new Scanner(System.in);
         
-        System.out.print("Enter a numuber");
+        System.out.print("Enter a numuber: ");
         
         int N = sc.nextInt();
 
