@@ -6,7 +6,6 @@ working-storage    section.
 01  COUNTER1       pic 9(8) value zero.
 01  COUNTER2       pic 9(8) value zero.
 01  DATA2          PIC 9(8).
-01  AVERAGE        PIC 9(8).
 procedure          division.
 RTN-START.
     perform  until  COUNTER2  >  999
