@@ -1,5 +1,5 @@
 identification     division.
-program-id.        ex04037.
+program-id.        ex040371.
 data               division.
 working-storage    section.
 01  DATA1          pic 9(3).
