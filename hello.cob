@@ -1,0 +1,17 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. hello.
+       
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 HELLO1      PIC X(50).
+       01 HELLO2.
+       03 FILLER  PIC X(06) VALUE 'HELLO,'.
+       03 FILLER  PIC X(01) VALUE SPACE.
+       03 FILLER  PIC X(06) VALUE 'WORLD!'.
+       03 FILLER  PIC X(01) VALUE SPACE.
+       03 FILLER  PIC 9(01) VALUE 2.
+       PROCEDURE DIVISION.
+       MOVE 'こんにちは、世界！そしてニホん 1' TO HELLO1.
+       DISPLAY HELLO1.
+       DISPLAY HELLO2.
+       STOP RUN.
