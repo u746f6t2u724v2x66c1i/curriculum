@@ -18,7 +18,3 @@ CREATE TABLE IF NOT EXISTS Memos (
     reminder TEXT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-
-
-(2, 'tom846@gmail.com', 'tom846', '5FMbNh%RBse}=0', '2016-10-16 02:00:00'),
-
