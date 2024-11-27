@@ -1,0 +1,95 @@
+ビルド手順
+依存関係のインストール
+
+npm install
+Linux 用ビルド
+
+npm run build:linux
+Windows 用ビルド
+
+npm run build:win
+全プラットフォームを対象にビルド
+
+npm run build
+注意事項
+Linux 用アイコン
+
+pomodorotimer03.png の解像度は 512x512 またはそれ以上の正方形推奨です。
+依存関係のバージョン
+
+electron と electron-builder のバージョンは適切に保つ必要があります。現在の設定（^33.0.2）は問題ありません。
+パーミッション
+
+Linux 用に生成された AppImage ファイルは、実行権限を付与する必要があります。
+chmod +x dist/*.AppImage
+Windows でのアイコン
+
+.ico ファイルの解像度は、複数サイズ（16x16, 32x32, 48x48, 256x256など）を含むことを推奨します。
+結論
+この修正版の package.json は推奨される設定に準拠しており、Linux と Windows の両方に対応しています。また、元の pomodorotimer03.png をアイコンとして問題なく使用できます。
+
+3. timespan の代替を探す
+timespan は非推奨パッケージなので、以下のような代替パッケージを利用することを検討してください。
+
+moment: 時間管理が必要な場合に使える有名なパッケージ。
+date-fns: 軽量な日付操作ライブラリ。
+代替パッケージをインストールして、timespan をプロジェクトから削除します。
+
+例: moment のインストール
+
+bash
+コードをコピーする
+npm install moment
+timespan を削除:
+
+bash
+コードをコピーする
+npm uninstall timespan
+
+
+このエラーは、fpm（Effing Package Management）が必要とする特定の GLIBC バージョンがインストールされていないために発生しています。具体的には、libcrypt.so.1 が GLIBC_2.2.5 バージョンを必要としていることを示していますが、現在のシステムにはそのバージョンが存在しないようです。
+
+以下のステップで解決を試みることができます：
+
+1. libcrypt の互換バージョンをインストール
+libxcrypt-compat パッケージをインストールすることで、必要なバージョンの libcrypt を提供することができます。
+
+bash
+sudo dnf install libxcrypt-compat
+2. electron-builder キャッシュの削除
+electron-builder のキャッシュが原因で問題が発生している可能性もあります。以下のコマンドでキャッシュを削除し、再度ビルドを試みてください。
+
+bash
+rm -rf ~/.cache/electron-builder
+3. fpm の再インストール
+fpm を再インストールして、必要な依存関係が正しく設定されているか確認します。
+
+bash
+gem install --user-install fpm
+解決に向けた流れ
+これらのステップを試してみて、libcrypt 関連の問題が解決するか確認してください。
+
+libxcrypt-compat パッケージのインストール
+
+electron-builder キャッシュの削除
+
+fpm の再インストール
+
+再度試してみてください。これで問題が解決しない場合は、他にも確認することが必要かもしれませんので、教えてください。お手伝いします！
+
+nano ~/.local/share/applications/pomodoro-timer.desktop
+
+
+
+[Desktop Entry]
+Name=Pomodoro Timer
+Comment=Pomodoro Timer Application
+Exec=/home/hiroppy123/pomodoro-timer02/dist/Pomodoro-Timer-1.0.0.AppImage
+Type=Application
+Terminal=false
+Icon=/home/hiroppy123/pomodoro-timer02/pomodorotimer03.png
+Categories=Utility;
+
+
+hiroppy123@fedora:~$ update-desktop-database ~/.local/share/applications
+

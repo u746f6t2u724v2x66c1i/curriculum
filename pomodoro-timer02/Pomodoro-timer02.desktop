@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Pomodoro Timer 02
+Comment=Pomodoro Timer Application
+Exec=/home/hiroppy123/pomodoro-timer02/dist/Pomodoro-Timer-1.0.0.AppImage
+Type=Application
+Terminal=false
+Icon=/home/hiroppy123/pomodoro-timer02/pomodorotimer03.png
+Categories=Utility;

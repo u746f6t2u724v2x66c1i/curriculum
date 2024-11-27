@@ -1,0 +1,51 @@
+{
+  "name": "pomodoro-timer",
+  "version": "1.0.0",
+  "main": "main.js",
+  "description": "A Pomodoro Timer Application",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",   
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "build:linux": "electron-builder --linux"
+  },
+  "devDependencies": {
+    "electron": "^33.0.2",
+    "electron-builder": "^24.6.2"
+  },
+  "build": {
+    "appId": "com.example.pomodorotimernodeapp",
+    "productName": "Pomodoro Timer",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!node_modules/**/*"
+    ],
+    "win": {
+      "icon": "./pomodorotimer03.ico",
+      "target": ["nsis", "zip"]
+    },
+    "linux": {
+      "target": ["AppImage", "deb"],
+      "icon": "./pomodorotimer03.png"
+    }
+  },
+  "homepage": "https://hiroppy123.web.fc2.com/",
+  "author": {
+    "name": "hiroppy123",
+    "email": "zusann123@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "hiroppy123",
+      "email": "zusann123@gmail.com"
+    }
+  ],  
+  "dependencies": {}  
+}
+
