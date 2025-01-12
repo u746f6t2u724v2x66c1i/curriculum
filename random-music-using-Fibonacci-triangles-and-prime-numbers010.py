@@ -26,7 +26,7 @@ def sequence_to_midi(sequence, min_note=21, max_note=108, offset=0):
     return [min_note + (num % (max_note - min_note + 1)) + offset for num in sequence]
 
 # 音楽を再生する関数
-def play_triangle_focused_music(triangle, fibonacci, primes, device_id, duration=180):
+def play_triangle_focused_music(triangle, fibonacci, primes, device_id, duration=1500):
     pygame.midi.init()
     try:
         player = pygame.midi.Output(device_id)

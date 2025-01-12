@@ -50,7 +50,7 @@ def play_music_with_beat(triangle, fibonacci, primes, device_id, bpm=120, durati
 
             # 2拍目：和音（フィボナッチ数列を使ったベースライン）
             fibonacci_note = random.choice(fibonacci_notes)
-            chord = [fibonacci_note, fibonacci_note + 7, fibonacci_note + 12]  # ベースラインの和音
+            chord = [fibonacci_note, fibonacci_note + random.choice([7, 9, 12]), fibonacci_note + random.choice([12, 14, 16])]  # ベースラインの和音
             for note in chord:
                 player.note_on(note, velocity - 20)
             time.sleep(beat_interval * 0.5)
@@ -88,4 +88,5 @@ if __name__ == "__main__":
     primes = generate_primes(num_terms)
 
     play_music_with_beat(triangle, fibonacci, primes, output_device_id, bpm=140, duration=1500)
+
 

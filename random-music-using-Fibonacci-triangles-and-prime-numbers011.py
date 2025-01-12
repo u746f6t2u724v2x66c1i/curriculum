@@ -30,7 +30,7 @@ def create_chord(note):
     return [note, note + 4, note + 7]  # メジャーコード（基音、長3度、完全5度）
 
 # 音楽を再生する関数
-def play_music_with_chords(triangle, fibonacci, primes, device_id, duration=180):
+def play_music_with_chords(triangle, fibonacci, primes, device_id, duration=1500):
     pygame.midi.init()
     try:
         player = pygame.midi.Output(device_id)

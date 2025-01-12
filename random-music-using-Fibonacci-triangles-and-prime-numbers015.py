@@ -26,7 +26,7 @@ def sequence_to_midi(sequence, min_note=21, max_note=108, offset=0):
     return [min_note + (num % (max_note - min_note + 1)) + offset for num in sequence]
 
 # メインの音楽再生関数
-def play_music_with_beat(triangle, fibonacci, primes, device_id, bpm=120, duration=300):
+def play_music_with_beat(triangle, fibonacci, primes, device_id, bpm=120, duration=1500):
     pygame.midi.init()
     try:
         player = pygame.midi.Output(device_id)
@@ -89,5 +89,5 @@ if __name__ == "__main__":
     fibonacci = generate_fibonacci(num_terms)
     primes = generate_primes(num_terms)
 
-    play_music_with_beat(triangle, fibonacci, primes, output_device_id, bpm=140, duration=300)
+    play_music_with_beat(triangle, fibonacci, primes, output_device_id, bpm=140, duration=1500)
 
